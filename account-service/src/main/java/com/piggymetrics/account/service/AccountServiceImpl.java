@@ -6,6 +6,7 @@ import com.piggymetrics.account.domain.Account;
 import com.piggymetrics.account.domain.Currency;
 import com.piggymetrics.account.domain.Saving;
 import com.piggymetrics.account.domain.User;
+import com.piggymetrics.account.repository.AccountGPRepository;
 import com.piggymetrics.account.repository.AccountRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,8 +28,9 @@ public class AccountServiceImpl implements AccountService {
 	@Autowired
 	private AuthServiceClient authClient;
 
-	@Autowired
-	private AccountRepository repository;
+//	@Autowired
+//	private AccountRepository repository;
+	private AccountGPRepository repository = new AccountGPRepository();
 
 	/**
 	 * {@inheritDoc}
